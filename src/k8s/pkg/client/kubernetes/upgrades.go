@@ -7,7 +7,6 @@ import (
 
 	crdsv1 "github.com/canonical/k8s/pkg/k8sd/crds/api/v1alpha"
 	"github.com/canonical/k8s/pkg/log"
-
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	ctrlclient "sigs.k8s.io/controller-runtime/pkg/client"
 )

@@ -6,7 +6,6 @@ import (
 	"time"
 
 	crdsv1 "github.com/canonical/k8s/pkg/k8sd/crds/api/v1alpha"
-
 	"github.com/go-logr/logr"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
