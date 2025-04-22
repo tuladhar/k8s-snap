@@ -6,7 +6,7 @@ $(LOCALBIN):
 	mkdir -p $(LOCALBIN)
 CONTROLLER_GEN ?= $(LOCALBIN)/controller-gen
 CONTROLLER_TOOLS_VERSION ?= v0.17.2
-CRDS_DIR ?= $(shell pwd)/pkg/k8sd/controllers/crds
+CRDS_DIR ?= $(shell pwd)/pkg/k8sd/crds
 CRDS_OUTPUT_DIR ?= ../../k8s/crds
 
 ## Development

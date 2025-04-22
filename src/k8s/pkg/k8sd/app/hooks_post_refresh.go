@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	apiv1_annotations "github.com/canonical/k8s-snap-api/api/v1/annotations"
-	crdsv1 "github.com/canonical/k8s/pkg/k8sd/controllers/crds/api/v1alpha"
+	crdsv1 "github.com/canonical/k8s/pkg/k8sd/crds/api/v1alpha"
 	databaseutil "github.com/canonical/k8s/pkg/k8sd/database/util"
 	"github.com/canonical/k8s/pkg/log"
 	snaputil "github.com/canonical/k8s/pkg/snap/util"

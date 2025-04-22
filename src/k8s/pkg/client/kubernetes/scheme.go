@@ -3,7 +3,7 @@ package kubernetes
 import (
 	"fmt"
 
-	crdsv1 "github.com/canonical/k8s/pkg/k8sd/controllers/crds/api/v1alpha"
+	crdsv1 "github.com/canonical/k8s/pkg/k8sd/crds/api/v1alpha"
 	"k8s.io/apimachinery/pkg/runtime"
 )
 

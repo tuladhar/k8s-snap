@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	crdsv1 "github.com/canonical/k8s/pkg/k8sd/controllers/crds/api/v1alpha"
+	crdsv1 "github.com/canonical/k8s/pkg/k8sd/crds/api/v1alpha"
 	"github.com/canonical/k8s/pkg/log"
 
 	apierrors "k8s.io/apimachinery/pkg/api/errors"

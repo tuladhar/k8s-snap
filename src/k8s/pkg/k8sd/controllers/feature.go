@@ -6,7 +6,7 @@ import (
 	"time"
 
 	apiv1_annotations "github.com/canonical/k8s-snap-api/api/v1/annotations"
-	crdsv1 "github.com/canonical/k8s/pkg/k8sd/controllers/crds/api/v1alpha"
+	crdsv1 "github.com/canonical/k8s/pkg/k8sd/crds/api/v1alpha"
 	"github.com/canonical/k8s/pkg/k8sd/features"
 	"github.com/canonical/k8s/pkg/k8sd/types"
 	"github.com/canonical/k8s/pkg/log"
