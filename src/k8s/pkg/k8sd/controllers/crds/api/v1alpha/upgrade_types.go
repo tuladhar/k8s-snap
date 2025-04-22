@@ -6,14 +6,25 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
+// +kubebuilder:validation:Enum=NodeUpgrade;FeatureUpgrade;Completed;Failed
+// +kubebuilder:validation:Required
+// +kubebuilder:validation:MinLength=1
+type UpgradePhase string
+
+// NOTE(Hue): Make sure to keep this up to date with the UpgradePhase type
+// Enum validation.
+const (
+	UpgradePhaseNodeUpgrade    UpgradePhase = "NodeUpgrade"
+	UpgradePhaseFeatureUpgrade UpgradePhase = "FeatureUpgrade"
+	UpgradePhaseCompleted      UpgradePhase = "Completed"
+	UpgradePhaseFailed         UpgradePhase = "Failed"
+)
+
 // UpgradeStatus defines the observed state of Upgrade.
 type UpgradeStatus struct {
-	// +kubebuilder:validation:Enum=NodeUpgrade;FeatureUpgrade;Completed;Failed
-	// +kubebuilder:validation:Required
-	// +kubebuilder:validation:MinLength=1
 	// Phase indicates the current phase of the upgrade process.
-	Phase string `json:"phase,omitempty"`
-	// UpgardedNodes is a list of nodes that have been successfully upgraded.
+	Phase UpgradePhase `json:"phase"`
+	// UpgradedNodes is a list of nodes that have been successfully upgraded.
 	// +optional
 	UpgradedNodes []string `json:"upgradedNodes,omitempty"`
 }
@@ -30,6 +41,15 @@ type Upgrade struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Status UpgradeStatus `json:"status,omitempty"`
+}
+
+// NewUpgrade creates a new Upgrade object with the given name.
+func NewUpgrade(name string) Upgrade {
+	return Upgrade{
+		ObjectMeta: metav1.ObjectMeta{
+			Name: name,
+		},
+	}
 }
 
 // +kubebuilder:object:root=true

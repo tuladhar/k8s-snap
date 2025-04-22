@@ -56,7 +56,7 @@ spec:
                 minLength: 1
                 type: string
               upgradedNodes:
-                description: UpgardedNodes is a list of nodes that have been successfully
+                description: UpgradedNodes is a list of nodes that have been successfully
                   upgraded.
                 items:
                   type: string
